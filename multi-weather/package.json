@@ -1,0 +1,23 @@
+{
+  "name": "MultiWeather",
+  "version": "0.1.0",
+  "description": "Multi city weather alexa skill powered by weather underground",
+  "main": "lambda.js",
+  "scripts": {
+    "build": "./build.sh",
+    "create": "./provisioning/awsCreate.sh MultiWeather",
+    "deploy": "./provisioning/awsUpdate.sh MultiWeather",
+    "invoke": "./provisioning/awsInvoke.sh MultiWeather",
+    "localInvoke": "node ./provisioning/localInvoke.js",
+    "test": "jasmine",
+    "test:watch": "watch jasmine ./"
+  },
+  "author": "Keith Walker",
+  "license": "Apache 2.0",
+  "dependencies": {
+    "request-promise": "^0.4.3"
+  },
+  "devDependencies": {
+    "proxyquire": "~1.7.2"
+  }
+}
